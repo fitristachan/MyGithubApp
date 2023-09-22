@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Github App</string>
+    <string name="username">Username</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="fullname">Full Name</string>
+    <string name="searchbar_hint">Search User</string>
+    <string name="location">Location</string>
+    <string name="tab_text_1">Following</string>
+    <string name="tab_text_2">Followers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="notExist">Sorry, this person doesn\'t exist</string>
+    <string name="showingResult">Showing %d search result</string>
+    <string name="favorite_list">Favorite List</string>
+    <string name="settings">Settings</string>
+    <string name="attention_text">Type the name above and find your friends!</string>
+    <string name="must_search_person">must search person</string>
+    <string name="dark_mode">Dark Mode</string>
+</resources>

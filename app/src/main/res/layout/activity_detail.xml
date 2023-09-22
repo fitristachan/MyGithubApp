@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimarySurface"
+    android:orientation="vertical"
+    tools:context=".ui.activity.DetailActivity"
+    android:theme="@style/Theme.MyGithubApp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimarySurface"
+        tools:context=".ui.activity.DetailActivity">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="-25dp"
+            android:background="?attr/colorSecondaryVariant">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop = "56dp"
+                    android:layout_marginBottom = "4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/TextContent.HeadlineMedium.Bold"
+                    tools:text="@string/fullname" />
+
+                <TextView
+                    android:id="@+id/tv_item_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:textColor="?attr/colorOnSecondary"
+                    style="@style/TextContent.TitleMedium"
+                    tools:text="@string/username" />
+
+                <TextView
+                    android:id="@+id/tv_item_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:textColor="?attr/colorOnSecondary"
+                    style="@style/TextContent.BodyMedium"
+                    tools:visibility="visible"
+                    tools:text="@string/location" />
+
+                <LinearLayout
+                    android:id="@+id/layout_foll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:id="@+id/layout_item_following"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="24dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_item_following"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom = "4dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            style="@style/TextContent.TitleMedium.Bold"
+                            tools:text="@string/following" />
+
+                        <TextView
+                            android:id="@+id/tv_following"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom = "4dp"
+                            android:layout_marginStart = "8dp"
+                            android:text="@string/following"
+                            android:textColor="?attr/colorOnSecondary"
+                            style="@style/TextContent.BodyMedium"
+                            tools:text="@string/following" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_item_followers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd= "24dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_item_followers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom = "4dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            style="@style/TextContent.TitleMedium.Bold"
+                            tools:text="@string/followers" />
+
+                        <TextView
+                            android:id="@+id/tv_followers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom = "4dp"
+                            android:layout_marginStart = "8dp"
+                            android:text="@string/followers"
+                            android:textColor="?attr/colorOnSecondary"
+                            style="@style/TextContent.BodyMedium"
+                            tools:text="@string/followers" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_share"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/share"
+                        android:contentDescription="@string/settings" />
+
+
+                    <Button
+                        android:id="@+id/btn_addFav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Add Favorite"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:background="@drawable/rounded_button"
+                        android:drawableLeft="@drawable/favorite_border"
+                        android:visibility="visible"/>
+
+                    <Button
+                        android:id="@+id/btn_faved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Favorited!"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:background="@drawable/rounded_button"
+                        android:drawableLeft="@drawable/favorite_filled"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorSecondaryContainer"
+                    android:contentDescription="Tabs"
+                    app:tabTextColor="?attr/colorOnSecondary"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/img_item_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="Avatar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_gravity="center_horizontal"
+        tools:visibility="visible" />
+</FrameLayout>
